@@ -8,6 +8,9 @@
 
 DHT dht(DHTPIN, DHTTYPE);
 
+const unsigned long SECOND = 1000;
+const unsigned long HOUR = 3600*SECOND;
+
 double temp = 0;
     
 void setup() 
@@ -21,7 +24,7 @@ void setup()
 void loop() 
 {
   // Wait one minute
-  delay(60000);
+  delay(Hour);
   // Read temperature as Celsius
   temp = dht.getTempCelcius();
 }
